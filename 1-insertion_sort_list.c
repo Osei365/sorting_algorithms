@@ -2,6 +2,7 @@
 
 /**
  * swap_func - swaps two listint_t pointers
+ * @list: head of the linked list
  * @a: first pointer
  * @b: second pointer
  */
