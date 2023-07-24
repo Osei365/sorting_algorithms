@@ -13,7 +13,7 @@ void shell_sort(int *array, size_t size)
 	if (array == NULL || size < 2)
 		return;
 
-	while (incr <= (size - 1) / 9)
+	while (incr < size / 3)
 		incr = (incr * 3) + 1;
 
 	while (incr > 0)
