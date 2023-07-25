@@ -50,14 +50,16 @@ void radix_sort(int *array, size_t size)
 					d = c;
 				}
 			}
+			if (d != b)
+			{
+				temp = array[d];
+				array[d] = array[b];
+				array[b] = temp;
 
-			temp = array[d];
-			array[d] = array[b];
-			array[b] = temp;
-
-			temp = newarray[d];
-			newarray[d] = newarray[b];
-			newarray[b] = temp;
+				temp = newarray[d];
+				newarray[d] = newarray[b];
+				newarray[b] = temp;
+			}
 		}
 		for (b = 0; b < (int)size; b++)
 			newarray[b] = newarray[b] / 10;
