@@ -52,7 +52,7 @@ void countsort(int *array, size_t size, int place)
 	for (a = 0; a < size; a++)
 		count[(array[a] / place) % 10]++;
 
-	for (a = 1; a <= 10; a++)
+	for (a = 1; a < 10; a++)
 		count[a] += count[a - 1];
 	for (i = size - 1; i >= 0; i--)
 		output[--count[(array[i] / place) % 10]] = array[i];
