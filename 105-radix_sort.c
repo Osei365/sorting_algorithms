@@ -44,7 +44,7 @@ void radix_sort(int *array, size_t size)
 			d = b;
 			for (c = b + 1; c < (int)size; c++)
 			{
-				if (newarray[c] % 10 < min)
+				if (min > newarray[c] % 10)
 				{
 					min = newarray[c] % 10;
 					d = c;
